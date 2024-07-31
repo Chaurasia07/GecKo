@@ -25,7 +25,6 @@ function Footer() {
                 {data.inquiry_mail}
               </a>
             </div>
-            {/* <div className=" footer-custom-flex"> */}
             <div className="footer-section address">
               <p className="custom-margin">Address</p>
               <p>{data.address}</p>
@@ -35,7 +34,6 @@ function Footer() {
               <a href={data.contact_mail}>{data.contact_mail}</a>
               <p>{data.contact_no}</p>
             </div>
-            {/* </div> */}
           </div>
           <div className="footer-bottom">
             <img

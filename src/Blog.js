@@ -29,7 +29,7 @@ function Blog() {
         <div className="blog-data-flex">
         {getBlog &&getBlog.slice(0, 3).map((blog,index)=>{
             return(
-            <div className="single-blog">
+            <div className="single-blog" key={index}>
             <img src={blog.image_url}></img>
             <h5>{blog.seo_title}</h5>
             <span>

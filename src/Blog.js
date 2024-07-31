@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
+const blogEndpoint = 'http://3.7.81.243:3253/api/blog/';
+
 
 function Blog() {
     const [getBlog , setGetBlog] = useState("");
     useEffect(() => {
         
-        axios.get(`http://3.7.81.243:3253/api/blog/`)
+        axios.get(`${blogEndpoint}`)
           .then((response) => {
             setGetBlog(response?.data?.data);
             console.log(response?.data?.data,"test")

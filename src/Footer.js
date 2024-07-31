@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 function Footer() {
   const [data, setData] = useState([]);
+  const settingsEndpoint = 'http://3.7.81.243:3253/api/settings/fetch-frontend-details';
   useEffect(() => {
     axios
-      .get("http://3.7.81.243:3253/api/settings/fetch-frontend-details")
+      .get(`${settingsEndpoint}`)
       .then((response) => {
         setData(response?.data?.data);
       })

@@ -11,6 +11,7 @@ function Contact() {
     description: "",
   });
   const [errors, setErrors] = useState({});
+  const contectEndpoint="http://3.7.81.243:3253/api/contact/send"
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -57,7 +58,7 @@ function Contact() {
         description: formData.description,
       };
       axios
-        .post(`http://3.7.81.243:3253/api/contact/send`, data)
+        .post(`${contectEndpoint}`, data)
         .then((response) => {
           console.log(response);
           setFormData({
